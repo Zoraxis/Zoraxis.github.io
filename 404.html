@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700;900&display=swap" rel="stylesheet">
 </head>
 <style>
     body{
@@ -12,9 +15,18 @@
         color: white;
         height: 100%;
         padding-bottom: 60%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
         overflow: hidden;
         background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     }
+	.rainbow-text {
+		background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+		color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		font-size: 1000%;
+	}
     h1{
         font-size: 600%; 
         text-align: center;
@@ -103,6 +115,9 @@
         h1{
             font-size: 400%; 
         }
+		canvas{
+			width: 80%;
+		}
     }
     @media(max-width:800px){
         body{
@@ -126,10 +141,13 @@
         }
     }
 
-    .snow {
+</style>
+
+<style>
+.snow {
 	 border-radius: 50%;
 	 float: left;
-	 margin-top: -100px;
+	 margin-top: -15%;
 	 position: absolute;
 }
  .snow:nth-child(1) {
@@ -945,7 +963,14 @@
 		 top: 100%;
 	}
 }
- 
+</style>
+<style>
+
+canvas{
+	padding-top: 5%;
+  align-self:center;
+  cursor:move;
+}
 </style>
 
 <body>
@@ -1151,7 +1176,64 @@
         <div class="snow"></div>
         <div class="snow"></div>
     </div>
+	
+	<div style="display: flex;justify-content: center;">
+		<canvas id='canv'></canvas>
+	</div>
+	<!--<h1 class="rainbow-text ">ERROR 404</h1>-->
     <h1 class="white-glow">Шо ты, заблудился?</h1>
     <h1 class="white-glow">Тыкай сюда > <a class="glow" href="https://zoraxis.github.io">да, сюда</a></h1>
 </body>
+
+<script>
+	document.ready(function(){
+  var c = document.getElementById('canv');
+  var $ = c.getContext('2d');
+  c.width = 600; c.height = 400; 
+  var ms = false;
+  var w = 0, h = 0;
+  
+  var img = new Image();
+  img.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/131045/404.png';
+  
+  var set = function(){
+    var run, _h, _w, dx, a;
+    w = img.width;
+    h = img.height;
+    $.translate(50, 50);
+    a = 30;
+    dx = 0;
+    _w = w + 50;
+    _h = h + 50;
+    return (run = function() {
+      var inc, i, j;
+      $.clearRect(-a, -a, _w, _h);
+      inc = ms === true ? 0.5 : 0.18;
+      for (j=0; j <= h; i = 0 <= h ? ++j : --j) {
+        dx = ~~(inc * (Math.random() - 0.5) * a);
+        $.drawImage(img, 0, i, w, 1, dx, i, w, 1);
+      }
+      window.requestAnimationFrame(run);
+    })();
+  };
+  img.onload = function(){
+    return set();
+  };
+  c.addEventListener('mouseover', function(){
+    return ms = true;
+  }, false);
+  c.addEventListener('touchmove',function(e){
+    e.preventDefault();
+    return ms = true;
+  }, false);
+  c.addEventListener('mouseout', function(){
+    return ms = false;
+  }, false);
+  c.addEventListener('touchend',function(){
+    return ms = false;
+  }, false);
+}());
+
+</script>
+
 </html>
