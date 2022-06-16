@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(37, 38, 49); 
+        color: white;
+    }
+    h1{
+        font-size: 600%; 
+        text-align: center;
+    }
+    a{
+        color: wheat;
+        text-decoration: none;
+    }
+    a:hover{
+        -webkit-animation: glow-blue 5s ease-in-out infinite alternate;
+        -moz-animation: glow-blue 5s ease-in-out infinite alternate;
+        animation: glow-blue 5s ease-in-out infinite alternate;
+    }
+
+    .glow {
+        color: #fff;
+        text-align: center;
+
+        -webkit-animation: glow 3s ease-in-out infinite alternate;
+        -moz-animation: glow 3s ease-in-out infinite alternate;
+        animation: glow 3s ease-in-out infinite alternate;
+    }
+    .white-glow{
+        /*text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fdfdfd, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 60px #ffffff, 0
+            0 70px #ffffff;*/
+            text-shadow: 0 0 7px #fff;
+    }
+    @-webkit-keyframes glow {
+            from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0
+            0 70px #e60073;
+        }
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px
+            #ff4da6, 0 0 80px #ff4da6;
+        }
+    }
+    @-webkit-keyframes glow-blue {
+            from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1700e6, 0 0 40px #2300e6, 0 0 50px #1700e6, 0 0 60px #1700e6, 0
+            0 70px #0400e6;
+        }
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #4d9aff, 0 0 40px #4da0ff, 0 0 50px #4da9ff, 0 0 60px #4d94ff, 0 0 70px
+            #4dafff, 0 0 80px #4da9ff;
+        }
+    }
+
+    @keyframes glow{
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0
+            0 70px #e60073;
+        }
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px
+            #ff4da6, 0 0 80px #ff4da6;
+        }
+    }
+    @keyframes glow-blue{
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1700e6, 0 0 40px #2300e6, 0 0 50px #1700e6, 0 0 60px #1700e6, 0
+            0 70px #0400e6;
+        }
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #4d9aff, 0 0 40px #4da0ff, 0 0 50px #4da9ff, 0 0 60px #4d94ff, 0 0 70px
+            #4dafff, 0 0 80px #4da9ff;
+        }
+    }
+
+    @media(max-width:1000px){
+        h1{
+            font-size: 500%; 
+        }
+    }
+    @media(max-width:850px){
+        h1{
+            font-size: 400%; 
+        }
+    }
+    @media(max-width:700px){
+        h1{
+            font-size: 300%; 
+        }
+    }
+    @media(max-width:505px){
+        h1{
+            font-size: 200%; 
+        }
+    }
+</style>
+<body>
+    <h1 class="white-glow">Шо ты, заблудился?</h1>
+    <h1 class="white-glow">Тыкай сюда > <a class="glow" href="https://zoraxis.github.io">да, сюда</a></h1>
+</body>
+</html>
