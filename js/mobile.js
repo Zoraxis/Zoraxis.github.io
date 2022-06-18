@@ -1,20 +1,57 @@
+let country;
+fetch('https://api.ipregistry.co/?key=tryout')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (payload) {
+        //console.log(payload.location.country.name + ', ' + payload.location.city);
+        country = payload.location.country.name;
+});
 
     const elts = {
     text1: document.getElementById("text1"),
     text2: document.getElementById("text2")
     };
 
-    const texts = [
-        "Чё",
-        "Как",
-        "Бомж",
-        "Зайди",
-        "С",
-        "ПК",
-        "Как",
-        "Мужик",
-        ":)"
-    ];
+    if(country == 'Germany'){
+        const texts = [
+            "Handy",
+            "ist",
+            "Cringe",
+            "nehmen",
+            "sie",
+            "ein",
+            "Computer",
+            "Bitte",
+            ":)"
+        ]; 
+    }
+    else if (country == 'Russia') {
+        const texts = [
+            "Чё",
+            "Как",
+            "Бомж",
+            "Зайди",
+            "С",
+            "ПК",
+            "Как",
+            "Мужик",
+            ":)"
+        ];
+    }
+    else{
+        const texts = [
+            "Why",
+            "So",
+            "Sad",
+            "?",
+            "No",
+            "PC",
+            "Buy",
+            "One!",
+            ":)"
+        ];
+    }
 
     const morphTime = 1;
     const cooldownTime = 0.25;
