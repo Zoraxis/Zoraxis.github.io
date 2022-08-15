@@ -13,6 +13,7 @@ fetch('https://api.ipregistry.co/?key=tryout')
     text2: document.getElementById("text2")
     };
 
+<<<<<<< HEAD
     if(country == 'Germany'){
         const texts = [
             "Handy",
@@ -52,6 +53,19 @@ fetch('https://api.ipregistry.co/?key=tryout')
             ":)"
         ];
     }
+=======
+    const texts = [
+        "Чё",
+        "Как",
+        "Бомж",
+        "Зайди",
+        "С",
+        "ПК",
+        "Как",
+        "Чад",
+        ":)"
+    ];
+>>>>>>> dd764fedd4955ee149c8b7d6f806752e9ad6f8bd
 
     const morphTime = 1;
     const cooldownTime = 0.25;
