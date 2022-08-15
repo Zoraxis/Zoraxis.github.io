@@ -4,8 +4,8 @@ fetch('https://api.ipregistry.co/?key=tryout')
         return response.json();
     })
     .then(function (payload) {
-        //console.log(payload.location.country.name + ', ' + payload.location.city);
-        country = payload.location.country.name;
+        console.log(payload.location.languages.name + ', ' + payload.location.city);
+        country = payload.location.languages.name;
 });
 
     const elts = {
@@ -13,8 +13,7 @@ fetch('https://api.ipregistry.co/?key=tryout')
     text2: document.getElementById("text2")
     };
 
-<<<<<<< HEAD
-    if(country == 'Germany'){
+    if(country == 'German'){
         const texts = [
             "Handy",
             "ist",
@@ -27,7 +26,7 @@ fetch('https://api.ipregistry.co/?key=tryout')
             ":)"
         ]; 
     }
-    else if (country == 'Russia') {
+    else if (country == 'Russian') {
         const texts = [
             "Чё",
             "Как",
@@ -53,19 +52,6 @@ fetch('https://api.ipregistry.co/?key=tryout')
             ":)"
         ];
     }
-=======
-    const texts = [
-        "Чё",
-        "Как",
-        "Бомж",
-        "Зайди",
-        "С",
-        "ПК",
-        "Как",
-        "Чад",
-        ":)"
-    ];
->>>>>>> dd764fedd4955ee149c8b7d6f806752e9ad6f8bd
 
     const morphTime = 1;
     const cooldownTime = 0.25;

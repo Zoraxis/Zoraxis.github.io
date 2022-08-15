@@ -1187,19 +1187,24 @@ canvas{
 </body>
 
 <script>
-	let country;
+	let country = "";
 	fetch('https://api.ipregistry.co/?key=tryout')
     .then(function (response) {
         return response.json();
     })
     .then(function (payload) {
-        //console.log(payload.location.country.name + ', ' + payload.location.city);
-        country = payload.location.country.name;
+        country = payload.location.languages.name;
+        console.log(payload.location.languages.name + ', ' + payload.location.city);
+        console.log(country);
 });
 
-	if(country == 'Germany'){
-		document.getElementById('t1').innerText = 'Was machst du hier?';
+	if(country == 'German'){
+		document.getElementById('t1').innerText = 'Hast du dich verlaufen?';
 		document.getElementById('t2').innerHTML = 'Klick du hier <a id="a1" class="glow" href="https://zoraxis.github.io">ja, hier</a>';
+	}
+	else if(country == 'Russian'){
+		document.getElementById('t1').innerText = 'Шо ты, потерялся?';
+		document.getElementById('t2').innerHTML = 'Тыкай сюда <a id="a1" class="glow" href="https://zoraxis.github.io">да, сюда</a>';
 	}
 	else{
 		document.getElementById('t1').innerText = 'Are you lost?';
@@ -1207,7 +1212,7 @@ canvas{
 	}
 		
 	document.ready(function(){
-		
+
 
 	var c = document.getElementById('canv');
 	var $ = c.getContext('2d');
