@@ -12,10 +12,12 @@ if (!isMobile) {
     canvas.width = innerWidth;
     canvas.height = innerHeight;
     c.fillRect(0, 0, canvas.width, canvas.height);
+
     let gravity = 0.5;
     let plSpeed = 0.03;
     let jumpsCount = 1;
     let jumpsLeft = 1;
+
     class Sprite {
         constructor({
             position,
@@ -30,12 +32,15 @@ if (!isMobile) {
             c.fillRect(this.position.x, this.position.y, 50, this.height);
         }
         update() {
+            if(this.position.y + this.height > canvas.height) this.position.y = canvas.height - this.height + 0.5;
+
             this.draw();
             if (this.position.y + this.height + this.velocity.y <= canvas.height) {
                 this.velocity.y += gravity;
             } else {
                 this.velocity.y = 0;
                 jumpsLeft = jumpsCount;
+                console.log('ground hit');
             }
             this.position.y += this.velocity.y;
             this.position.x += this.velocity.x;
@@ -73,9 +78,11 @@ if (!isMobile) {
         }
     }
     function animate() {
+        console.log(jumpsLeft);
         window.requestAnimationFrame(animate);
-        //canvas.width = innerWidth;
-        //canvas.height = innerHeight;
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
         c.fillStyle = 'black';
         c.fillRect(0, 0, canvas.width, canvas.height);
         player.update();
@@ -103,7 +110,8 @@ if (!isMobile) {
         }
         if (player.velocity.x > 0 && player.velocity.x < 0.02) player.velocity.x = 0;
         //console.log(player.velocity.x);
-        console.log(jumpsLeft);
+
+        //console.log(jumpsLeft);
     }
     animate();
     window.addEventListener('keydown', (event) => {
