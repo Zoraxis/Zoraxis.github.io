@@ -13,15 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onblur="javascript:Pause();" onfocus="javascript:Unpause();">
     <canvas id="mainCanvas"></canvas>
-    <div id="hud">
-        <div id="scrSizeChanged">
-            <h1>Window size changed!</h1>
-            <h3>Want to reload?</h3>
-        </div>
-
-    </div>
 
     <script src="../js/game.js"></script>
 </body>

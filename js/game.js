@@ -1,5 +1,4 @@
 
-
 var isMobile = false; //initiate as false
 // device detection
 if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) ||
@@ -13,15 +12,21 @@ if (!isMobile) {
     canvas.height = innerHeight;
     c.fillRect(0, 0, canvas.width, canvas.height);
 
-    let gravity = 0.5;
+    let gravity = 0.3;
     let plSpeed = 0.03;
-    let jumpsCount = 1;
+    let jumpsCount = 2;
     let jumpsLeft = 1;
+    let pause = false;
+
+    function Pause(){pause = false}
+    function Unpause(){pause = true}
 
     class Sprite {
         constructor({
             position,
-            velocity
+            velocity,
+            jumpsCount,
+            jumpsLeft = jumpsCount
         }) {
             this.position = position;
             this.velocity = velocity
@@ -39,8 +44,7 @@ if (!isMobile) {
                 this.velocity.y += gravity;
             } else {
                 this.velocity.y = 0;
-                jumpsLeft = jumpsCount;
-                console.log('ground hit');
+                this.jumpsLeft = jumpsCount;
             }
             this.position.y += this.velocity.y;
             this.position.x += this.velocity.x;
@@ -54,7 +58,8 @@ if (!isMobile) {
         velocity: {
             x: 0,
             y: 0
-        }
+        },
+        jumpsCount: 1
     });
     const enemy = new Sprite({
         position: {
@@ -77,41 +82,45 @@ if (!isMobile) {
             pressed: false
         }
     }
+    function clearKeys(){
+        keys.a.pressed = false;
+        keys.d.pressed = false;
+        keys.w.pressed = false;
+    }
+    
     function animate() {
-        console.log(jumpsLeft);
         window.requestAnimationFrame(animate);
-        canvas.width = innerWidth;
-        canvas.height = innerHeight;
+        if (!pause) {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
 
-        c.fillStyle = 'black';
-        c.fillRect(0, 0, canvas.width, canvas.height);
-        player.update();
-        enemy.update();
-        if (keys.a.pressed != keys.d.pressed) {
-            if (keys.a.pressed) {
-                if (player.velocity.x > -(canvas.width / 1000)) {
-                    if (player.velocity.x > 0) player.velocity.x -= plSpeed * 2;
-                    player.velocity.x -= plSpeed * 2.5;
+            c.fillStyle = 'black';
+            c.fillRect(0, 0, canvas.width, canvas.height);
+            player.update();
+            enemy.update();
+            if (keys.a.pressed != keys.d.pressed) {
+                if (keys.a.pressed) {
+                    if (player.velocity.x > -(canvas.width / 1000)) {
+                        if (player.velocity.x > 0) player.velocity.x -= plSpeed * 2;
+                        player.velocity.x -= plSpeed * 2.5;
+                    }
+                }
+                if (keys.d.pressed) {
+                    if (player.velocity.x < canvas.width / 1000) {
+                        if (player.velocity.x < 0) player.velocity.x += plSpeed * 2;
+                        player.velocity.x += plSpeed * 2.5;
+                    }
                 }
             }
-            if (keys.d.pressed) {
-                if (player.velocity.x < canvas.width / 1000) {
-                    if (player.velocity.x < 0) player.velocity.x += plSpeed * 2;
-                    player.velocity.x += plSpeed * 2.5;
+            if (keys.d.pressed == keys.a.pressed) {
+                if (player.velocity.x > 0) {
+                    player.velocity.x -= plSpeed;
+                } else if (player.velocity.x < 0) {
+                    player.velocity.x += plSpeed;
                 }
             }
+            if (player.velocity.x > 0 && player.velocity.x < 0.02) player.velocity.x = 0;
         }
-        if (keys.d.pressed == keys.a.pressed) {
-            if (player.velocity.x > 0) {
-                player.velocity.x -= plSpeed;
-            } else if (player.velocity.x < 0) {
-                player.velocity.x += plSpeed;
-            }
-        }
-        if (player.velocity.x > 0 && player.velocity.x < 0.02) player.velocity.x = 0;
-        //console.log(player.velocity.x);
-
-        //console.log(jumpsLeft);
     }
     animate();
     window.addEventListener('keydown', (event) => {
@@ -123,9 +132,9 @@ if (!isMobile) {
                 keys.a.pressed = true;
                 break;
             case 'w':
-                if (jumpsLeft > 0) {
+                if (player.jumpsLeft > 0) {
                     player.velocity.y = -13;
-                    jumpsLeft--;
+                    player.jumpsLeft--;
                 }
                 break;
         }
@@ -168,11 +177,11 @@ else{
 
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'css/mobile.css';
+    link.href = '../css/mobile.css';
 
     head.appendChild(link);
 
     var script = document.createElement("script");
-    script.src = 'js/mobile.js';
+    script.src = '../js/mobile.js';
     head.appendChild(script);
 }
