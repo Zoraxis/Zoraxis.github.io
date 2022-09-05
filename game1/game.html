@@ -5,15 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME - DrZork's site</title>
-    <link rel="stylesheet" href="../css/classes.css">
-    <link rel="stylesheet" href="../css/ids.css">
-    <link rel="stylesheet" href="../css/compapability.css">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/body.css">
 </head>
 <body onblur="javascript:Pause();" onfocus="javascript:Unpause();">
+    <style>
+        #hud {
+            position: absolute;
+            text-align: center;
+        }
+
+        #scrSizeChanged {
+            bottom: 0%;
+            right: 0%;
+            width: 35%;
+            color: aqua;
+            background-color: white;
+            background-blend-mode: lighten;
+
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+        }
+    </style>
     <canvas id="mainCanvas"></canvas>
 
     <script src="../js/game.js"></script>

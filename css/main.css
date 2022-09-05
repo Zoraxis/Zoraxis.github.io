@@ -1,0 +1,26 @@
+body{
+    height: 100%;
+    color: #212529;
+}
+.nav-menu{
+    width: 100%;
+    position: absolute;
+    display: flex;
+
+    background-color: purple;
+}
+.nav-el{
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+    font-weight: 900;
+}
+
+a:hover {
+    color: aqua;
+}
