@@ -48,6 +48,10 @@ body::-webkit-scrollbar {
 .justify-between{justify-content: space-between;}
 
 #about img{width: 100%;}
+#about-details{
+    width: 100%;
+    position: relative;
+}
 .fill-btn{
     text-transform: uppercase;
     color: white;
