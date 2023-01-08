@@ -1,3 +1,6 @@
+#video-block{
+    z-index: -1;
+}
 #video-block video{
     height: 88.888vh;
     width: 100%;

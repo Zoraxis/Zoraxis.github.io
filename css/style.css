@@ -37,13 +37,17 @@ body::-webkit-scrollbar {
     margin-left: auto;
     margin-right: auto;
 }
-.block{margin-bottom: 82px;}
+.block{
+    margin-bottom: 82px;
+    position: relative;
+}
 .overflow{overflow: visible;}
 .flex {display: flex;}
 .flex-wrap {flex-wrap: wrap;}
 .allign-center {align-items: center;}
 .justify-between{justify-content: space-between;}
 
+#about img{width: 100%;}
 .fill-btn{
     text-transform: uppercase;
     color: white;
