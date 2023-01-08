@@ -1,0 +1,25 @@
+#video-block video{
+    height: 88.888vh;
+    width: 100%;
+    /* height: 720px; */
+
+    pointer-events: none;
+    user-select: none;
+    object-fit: fill;
+}
+.blur-block{
+    position: absolute;
+    background: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(14px);
+    padding: 18px 20px;
+    color: white;
+}
+.player-overlay{
+    bottom: 14.629%;
+}
+#lplayer-overlay{
+    left: 10.462%;
+}
+#rplayer-overlay{
+    right: 09.809%
+}
