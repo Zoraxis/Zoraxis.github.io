@@ -11,8 +11,8 @@ body {
     width: 100%;
 }
 
-.f60{width: 60.743%;}
-.f30{width: 0 0 36.422%;}
+.f60{flex: 0 0 60.743%;}
+.f30{flex: 0 0 36.422%;}
 .f-half{flex: 0 0 47.778%}
 
 .mb48 {margin-bottom: 48px;}
@@ -43,8 +43,7 @@ body {
 .flex-wrap {flex-wrap: wrap;}
 .allign-center {align-items: center;}
 .justify-between{justify-content: space-between;}
-
-#about img{width: 100%;}
+.w100{width: 100%;}
 #about-details{
     width: 100%;
     position: relative;
