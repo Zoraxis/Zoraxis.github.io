@@ -9,11 +9,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
 .f60{flex: 0 0 60.743%;}
 .f30{flex: 0 0 36.422%;}
 .f-half{flex: 0 0 47.778%}
