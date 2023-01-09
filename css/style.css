@@ -49,6 +49,8 @@ body {
 .flex-wrap {flex-wrap: wrap;}
 .allign-center {align-items: center;}
 .justify-between{justify-content: space-between;}
+.justify-center{justify-content: center;}
+.relative{position: relative}
 .w100{width: 100%;}
 #about-details{
     width: 100%;
@@ -94,13 +96,15 @@ body {
     height: 200px;
 }
 .facts{
-    gap: 31px;
+    /* gap: 31px; */
+    gap: 01.5666vw
 }
 .fact{
     position: relative;
     box-shadow: 0px 4px 16px rgba(28, 38, 83, 0.08);
     /* width: 400px; */
-    width: 20.833%;
+    /* width: 20.833vw; */
+    width: 20.687vw;
     /* height: 240px; */
     height: 22.222vh;
     text-align: center;

@@ -16,15 +16,17 @@
 #nav-menu{
     max-width: 100%;
     /* gap: 102px; */
-    /* gap: 5.625%; */
-    justify-content: space-between;
+    /* gap: 08.955%; */
+    /* gap: calc((102px / 100vw) * 100vw); */
+    gap: 9vw;
+    /* justify-content: space-between; */
     max-height: 81px;
 }
 .nav-items{
     /* gap: 38px; */
-    /* gap: 2.638%; */
-    width: 42.222%;
+    gap: 03.336%;
+    width: calc(100% + 90px);
     text-transform: uppercase;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     position: relative;
 }
