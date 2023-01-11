@@ -5,6 +5,9 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+hr{
+    border: 1px solid #E4E4EB
+}
 #wrapper{
     position: relative;
     overflow: hidden;
@@ -24,7 +27,9 @@ body {
 .mb48 {margin-bottom: 48px;}
 .mb37 {margin-bottom: 37px;}
 .mb32 {margin-bottom: 32px;}
+.mb22 {margin-bottom: 22px;}
 .mb19 {margin-bottom: 19px;}
+.mb16 {margin-bottom: 16px;}
 .mb9 {margin-bottom: 9px;}
 
 .mr {margin-right: 02.86%;}
@@ -44,7 +49,12 @@ body {
     margin-bottom: 82px;
     position: relative;
 }
+.grey{color: #74747B;}
 .overflow{overflow: visible;}
+.pointer{cursor: pointer;}
+.txt-center{text-align: center;}
+.uppercase{text-transform: uppercase;}
+.underline{text-decoration: underline;}
 .flex {display: flex;}
 .flex-wrap {flex-wrap: wrap;}
 .allign-center {align-items: center;}
@@ -70,8 +80,13 @@ body {
     align-items: center;
 }
 .s-btn{
-    width: 294px;
-    height: 55px;
+    /* width: 294px; */
+    width: 15.312vw;
+    /* height: 55px; */
+    height: 05.092vh;
+}
+.b-btn{
+    height: 48px;
 }
 .card{
     width: 48.583%;
@@ -128,4 +143,16 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-35%,-90%);
+}
+.plans{
+    gap: 02.604vw;
+}
+.plan{
+    width: 27.4135vw;
+    max-width: 27.708vw;
+    box-sizing: border-box;
+    padding: 24px 36px 24px 36px;
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 16px rgba(28, 38, 83, 0.08);
 }
