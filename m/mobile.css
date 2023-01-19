@@ -1,0 +1,59 @@
+.container{
+    width: 89.7435897vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    box-sizing: border-box;
+    padding: 10px 24px;
+}
+header svg{
+    flex: 0 0 auto;
+}
+img{
+    width: 100%;
+}
+#main img{
+    height: 56.8720379vh;
+}
+.img-overlay{
+    position: absolute;
+    top: 30.9241706vh;/*261px*/
+    left: 05.128205vw;/*20px*/
+}
+.block{
+    margin-bottom: 03.79146919vh;
+}
+.m-btn{
+    width: 27.9487179vw;
+    height: 32px;
+}
+.cards{
+    gap: 01.42180094vh;
+}
+.card{
+    position: relative;
+    height: 20.97156398vh;
+}
+.adv1-readable{
+    bottom: 3.5%;
+}
+.adv1-txt{
+    left: 04.1025641vw;
+    bottom: 01.89573459vh;
+}
+.adv2-icons svg:first-child, .adv2-icons svg:last-child{
+    width: 70%;
+}
+.adv2-icons svg:last-child{
+    transform: translate(-48%,-90%);
+}
+.adv2-inf{
+    position: absolute;
+    right: 03.07692307vw;
+    top: 01.4218009vh;
+}
+.fact{
+    width: 100%;
+    gap: 0px;
+}

@@ -50,9 +50,9 @@
     top: 0%;
 }
 #slider-left-shadow{
-    background: radial-gradient(at left, rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0) 60%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 40%);
 }
 #slider-right-shadow{
     right: 0%;
-    background: radial-gradient(at right, rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0) 60%);
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 30%);
 }
