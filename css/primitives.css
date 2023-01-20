@@ -86,10 +86,13 @@ body {
 }
 .f-half{flex: 0 0 47.778%}
 
+.h32 {height: 32px;}
+
 .mb48 {margin-bottom: 48px;}
 .mb37 {margin-bottom: 37px;}
 .mb32 {margin-bottom: 32px;}
 .mb22 {margin-bottom: 22px;}
+.mb20 {margin-bottom: 20px;}
 .mb19 {margin-bottom: 19px;}
 .mb16 {margin-bottom: 16px;}
 .mb14 {margin-bottom: 14px;}
@@ -99,6 +102,7 @@ body {
 
 .mr {margin-right: 02.86%;}
 .mr32{margin-right: 01.666vw}
+.mr12{margin-right: 12px}
 
 .container {
     /* width: 1139px; */
@@ -115,6 +119,11 @@ body {
 .block{
     margin-bottom: 82px;
     position: relative;
+}
+.absolute-center{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 .txt-fix{white-space: nowrap;}
 .grey{color: #74747B;}

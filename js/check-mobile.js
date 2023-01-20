@@ -9,4 +9,3 @@ function check() {
 if(check()){
     window.location.replace("/m");
 }
-// window.location.replace("/m");

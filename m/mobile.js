@@ -1,5 +1,14 @@
-// let coef = 0.85;
-// $(".adv2-highlight").each(function () {
-//     $(this).attr("width", parseFloat($(this).attr("width")) * coef);
-//     $(this).attr("height", parseFloat($(this).attr("height")) * coef);
-// })
+function resizeEvent(){
+    if(window.orientation == 90){
+        $("#landscape").fadeIn("fast")
+        $("#landscape-container svg g path").attr("transform", "scale(-1,1)")
+        document.title = $("#landscape-container svg").attr("transform")
+    }else if (window.orientation == -90) {
+        $("#landscape").fadeIn("fast")
+        $("#landscape-container svg g path").attr("transform", "scale(1,1)")
+        document.title = $("#landscape-container svg").attr("transform")
+    }
+    else $("#landscape").fadeOut("fast")
+}
+resizeEvent()
+$(window).resize(resizeEvent)
