@@ -129,6 +129,7 @@ body {
 .grey{color: #74747B;}
 .white{color: white;}
 .overflow{overflow: visible;}
+.no-overflow{overflow: hidden;}
 .pointer{cursor: pointer;}
 .txt-center{text-align: center;}
 .uppercase{text-transform: uppercase;}
