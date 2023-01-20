@@ -1,3 +1,10 @@
+$(function() {
+    $("#landscape-container").css({
+        top: (($(window).height() - $("#landscape-container").height()) / 2)
+    })
+    resizeEvent()
+});
+
 function resizeEvent(){
     if(window.orientation == 90){
         $("#landscape").fadeIn("fast")
@@ -13,5 +20,4 @@ function resizeEvent(){
         $(document.body).removeClass("no-overflow")
     }
 }
-resizeEvent()
 $(window).resize(resizeEvent)

@@ -88,13 +88,15 @@ img {
 }
 #landscape{
     position: absolute;
+    left: 0px;
+    top: 0px;
     z-index: 4;
     background-color: white;
     width: 100vw;
     height: 100vh;
 }
 #landscape-container{
-    padding-top: -30%;
-    /* transform: translate(0, -80%); */
-    /* margin-bottom: -10%; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
