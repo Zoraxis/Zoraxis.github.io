@@ -57,3 +57,6 @@
     cursor: pointer;
     user-select: none;
 }
+#icon svg{
+    position: absolute;
+}

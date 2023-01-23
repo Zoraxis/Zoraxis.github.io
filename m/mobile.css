@@ -15,17 +15,19 @@ header svg {
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
-#main img {
+#main-block{
     height: 56.8720379vh;
+    margin-bottom: 20%;
 }
 
 .img-overlay {
     position: absolute;
     bottom: 05.33175355vh;
     /*261px*/
-    left: 05.128205vw;
+    left: 10vw;
     /*20px*/
 }
 
@@ -42,13 +44,13 @@ img {
     gap: 01.75vh;
 }
 
-.card {
+.card img, .card{
     position: relative;
     height: 20.97156398vh;
 }
 
 .adv1-readable {
-    bottom: -5%;
+    bottom: 0%;
 }
 
 .adv1-txt {
@@ -74,7 +76,7 @@ img {
 
 .facts {
     /* gap: 01.4218009vh */
-    gap: 12px
+    gap: clamp(12px, 01.4218009vh, 16px)
 }
 
 .fact {
@@ -86,17 +88,154 @@ img {
     padding: 01.89573459vh 04.1025641vw;
     background-color: #E5F1FA;
 }
-#landscape{
-    position: absolute;
+
+#landscape {
+    position: sticky;
     left: 0px;
     top: 0px;
-    z-index: 4;
+    z-index: 6;
     background-color: white;
     width: 100vw;
     height: 100vh;
 }
-#landscape-container{
+
+#landscape-container {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+.nav-items {
+    margin-top: 10px;
+    gap: 5px;
+}
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+.ham8 .top {
+    stroke-dasharray: 40 160;
+    transition: 200ms;
+}
+
+.ham8 .middle, .ham8 .middle2{
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: 200ms;
+    transition-delay: 100ms;
+}
+
+.ham8.active .top {
+    opacity: 0;
+    transform: translate(0, -20px);
+}
+
+.ham8.active .middle {
+    transform: rotate(90deg);
+}
+.ham8.active .middle2 {
+    transform: rotate(-180deg);
+}
+
+.ham8.active .bottom {
+    opacity: 0;
+    transform: translate(0, 20px);
+}
+
+#cards-overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+
+    padding: 16px;
+}
+
+.slider ul img {
+    position: absolute;
+    float: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 166px;
+    text-align: center;
+    line-height: 300px;
+    object-fit: fill;
+}
+
+.slider ul {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    display: inline-block;
+    list-style: none;
+}
+
+.control {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    background: #2a2a2a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-arrow{
+    width: 25px;
+    height: 25px;
+
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.slider-arrow svg{
+    width: 100%;
+    height: 100%;
 }

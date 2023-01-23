@@ -19,28 +19,7 @@
 .slider-cover-right{
     left: 100%;
 }
-.slider-arrow{
-    background-color: #1D1E20;
-    position: absolute;
-    cursor: pointer;
-    z-index: 3;
 
-    width: 02.29166vw;
-    height: 02.29166vw;
-
-    top: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#slider-left-arrow{
-    border-radius: 0px 5px 5px 0px;
-}
-#slider-right-arrow{
-    right: 0%;
-    border-radius: 5px 0px 0px 5px;
-}
 .slider-shadow{
     width: 30%;
     height: 100%;

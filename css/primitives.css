@@ -1,3 +1,17 @@
+:root{
+    --dark-color: #1D1E20;
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{padding-left: 0px;}
 body {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -13,7 +27,7 @@ body {
 }
 .fill-btn{
     color: white;
-    background-color: #1D1E20;
+    background-color: var(--dark-color);
     user-select: none;
     cursor: pointer;
     box-sizing: border-box;
@@ -91,6 +105,7 @@ body {
 .mb48 {margin-bottom: 48px;}
 .mb37 {margin-bottom: 37px;}
 .mb32 {margin-bottom: 32px;}
+.mb28 {margin-bottom: 28px;}
 .mb22 {margin-bottom: 22px;}
 .mb20 {margin-bottom: 20px;}
 .mb19 {margin-bottom: 19px;}
@@ -142,3 +157,38 @@ body {
 .justify-center{justify-content: center;}
 .relative{position: relative}
 .w100{width: 100%;}
+
+#overlay{
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+#loader{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider-arrow{
+    background-color: #1D1E20;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+
+    width: 02.29166vw;
+    height: 02.29166vw;
+
+    top: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-left-arrow{
+    border-radius: 0px 5px 5px 0px;
+}
+.slider-right-arrow{
+    right: 0%;
+    border-radius: 5px 0px 0px 5px;
+}
