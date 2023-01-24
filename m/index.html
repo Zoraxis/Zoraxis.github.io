@@ -34,8 +34,8 @@
         </div>
     </div>
     <div id="overlay">
-        <div id="loader"></div>
-        <div id="cards-overlay" class="border-box" style="display: none;">
+        <div id="loader" class="full"></div>
+        <div id="cards-overlay" class="full" style="display: none;">
             <div id="close-cards" class="flex justify-between mb28">
                 <div></div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -50,14 +50,15 @@
                     </defs>
                 </svg>
             </div>
-            <div id="cards-slider" class="slider">
+            <div id="cards-slider" class="slider mb8">
                 <ul>
-                    <img src="../media/advantages/placeholder.png">
-                    <img src="../media/advantages/placeholder.png">
-                    <img src="../media/advantages/placeholder.png">
-                    <img src="../media/advantages/placeholder.png">
-                    <img src="../media/advantages/placeholder.png">
-                    <img src="../media/advantages/placeholder.png">
+                    <img src="media/nums/1.jpg">
+                    <img src="media/nums/2.png">
+                    <img src="media/nums/3.png">
+                    <img src="media/nums/4.jpg">
+                    <img src="media/nums/5.jpg">
+                    <img src="media/nums/6.webp">
+                    <img src="media/nums/7.jpg">
                 </ul>
 
                 <a class="next slider-arrow slider-right-arrow">
@@ -99,9 +100,54 @@
                     </svg>
                 </a>
             </div>
-            <div><span id="cards-current"></span>/<span id="cards-max"></span></div>
-        </div>
+            <div class="fw5 fs9 mb8"><span class="fs15" id="cards-current"></span> / <span id="cards-max"></span></div>
+            <div class="cards-info">
+                <div class="card-info" id="1">
+                    <div class="fw6 fs15 mb10">Інфраструктура</div>
+                    <p class="fw5 fs11">Квартири в елітному житловому комплексі клубного типу Кольчинський квартал у затишному зеленому куточку Закарпаття в історичному селищі Кольчино неподалік від міста Мукачево. Для тих, хто цінує прогулянки у мальовничому місці Закарпаття, милуватися неповторними гірськими краєвидами з вікон своєї оселі, дихати чистим повітрям, відчути комфортне життя та мінімалізм.</p>
+                </div>
 
+                <div class="card-info active-card-info" id="2" style="display: none;">
+                    <div class="fw6 fs15 mb10">Бомбосховище</div>
+                    <p class="fw5 fs11"></p>
+                </div>
+                <div class="card-info" id="3" style="display: none;">
+                    <div class="fw6 fs15 mb10">Паркінг</div>
+                    <p class="fw5 fs11"></p>
+                </div>
+                <div class="card-info" id="4" style="display: none;">
+                    <div class="fw6 fs15 mb10">Дизайн</div>
+                    <p class="fw5 fs11"></p>
+                </div>
+                <div class="card-info" id="5" style="display: none;">
+                    <div class="fw6 fs15 mb10">Зона для барбекю</div>
+                    <p class="fw5 fs11"></p>
+                </div>
+                <div class="card-info" id="6" style="display: none;">
+                    <div class="fw6 fs15 mb10">Місця для відпочинку</div>
+                    <p class="fw5 fs11"></p>
+                </div>
+                <div class="card-info" id="7" style="display: none;">
+                    <div class="fw6 fs15 mb10">Закрита територія</div>
+                    <p class="fw5 fs11"></p>
+                </div>
+            </div>
+        </div>
+        <div class="facts-overlay dark-bg full" style="display: none;"></div>
+        <div id="fact-overlay" class="facts-overlay fs14 fw5" style="display: none;">
+            <div id="f1" style="display: none;">Продумані планування, світлі квартири, захоплюючі краєвиди, доглянута прибудинкова територія з паркінгом, зонами відпочинку та дизайнерським озелененням.</div>
+            <div id="f2" style="display: none;">Натуральний матеріал, міцний та стійкий до будь-яких погодних умов. </div>
+            <div id="f3" style="display: none;"></div>
+            <div id="f4" style="display: none;"></div>
+            <div id="f5" style="display: none;"></div>
+            <div id="f6" style="display: none;"></div>
+            <div id="f7" style="display: none;"></div>
+            <div id="f8" style="display: none;"></div>
+            <div id="f9" style="display: none;"></div>
+            <div id="f10" style="display: none;"></div>
+            <div id="f11" style="display: none;"></div>
+            <div id="f12" style="display: none;"></div>
+        </div>
     </div>
     <div id="main">
         <header>
@@ -292,7 +338,7 @@
             <div id="advantages2" class="block mb20">
                 <div class="fw6 fs17 mb12">Характеристики ЖК</div>
                 <div class="flex flex-column facts">
-                    <div class="fact">
+                    <div class="fact" data-fact="1">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"
                                 fill="none">
@@ -320,7 +366,7 @@
                         </div>
                         <div class="fw5 fs16">Комфорт клас</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="2">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="38" viewBox="0 0 48 38"
                                 fill="none">
@@ -359,7 +405,7 @@
                         </div>
                         <div class="fw5 fs16">Цегляні стіни</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="3">
                         <div class="adv2-icons">
                             <svg class="overflow" xmlns="http://www.w3.org/2000/svg" width="40" height="56"
                                 viewBox="0 4 40 56" fill="none">
@@ -380,7 +426,7 @@
                         </div>
                         <div class="fw5 fs16">Індивідуальне опалення</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="4">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"
                                 fill="none">
@@ -404,7 +450,7 @@
                         </div>
                         <div class="fw5 fs16">Власний паркінг</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="5">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 62 62"
                                 fill="none">
@@ -431,7 +477,7 @@
                         </div>
                         <div class="fw5 fs16">Тераса</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="6">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="59" height="61" viewBox="0 0 59 61"
                                 fill="none">
@@ -466,7 +512,7 @@
                         </div>
                         <div class="fw5 fs16">Бомбосховище</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="7">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"
                                 fill="none">
@@ -490,7 +536,7 @@
                         </div>
                         <div class="fw5 fs16">Вільне планування</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="8">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"
                                 fill="none">
@@ -520,7 +566,7 @@
                         </div>
                         <div class="fw5 fs16">Зони відпочинку</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="9">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"
                                 fill="none">
@@ -546,7 +592,7 @@
                         </div>
                         <div class="fw5 fs16">40 км до кордону</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="10">
                         <div class="adv2-icons">
                             <svg class="overflow" xmlns="http://www.w3.org/2000/svg" width="58" height="58"
                                 viewBox="0 3 58 58" fill="none">
@@ -571,7 +617,7 @@
                         </div>
                         <div class="fw5 fs16">0,5 км до траси Київ - Чоп</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="11">
                         <div class="adv2-icons">
                             <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 58 58"
                                 fill="none">
@@ -595,7 +641,7 @@
                         </div>
                         <div class="fw5 fs16">2,8 км до Мукачево</div>
                     </div>
-                    <div class="fact">
+                    <div class="fact" data-fact="12">
                         <div class="adv2-icons">
                             <svg class="overflow" xmlns="http://www.w3.org/2000/svg" width="58" height="58"
                                 viewBox="0 -5 58 58" fill="none">

@@ -112,7 +112,9 @@ body {
 .mb16 {margin-bottom: 16px;}
 .mb14 {margin-bottom: 14px;}
 .mb12 {margin-bottom: 12px;}
+.mb10 {margin-bottom: 10px;}
 .mb9 {margin-bottom: 9px;}
+.mb8 {margin-bottom: 8px;}
 .mb2 {margin-bottom: 2px;}
 
 .mr {margin-right: 02.86%;}
@@ -159,7 +161,7 @@ body {
 .w100{width: 100%;}
 
 #overlay{
-    position: sticky;
+    position: fixed;
     z-index: 5;
     top: 0;
     left: 0;
@@ -170,6 +172,9 @@ body {
     height: 100vh;
 }
 
+.slider{
+    user-select: none;
+}
 .slider-arrow{
     background-color: #1D1E20;
     position: absolute;

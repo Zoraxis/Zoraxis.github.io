@@ -4,8 +4,9 @@ let slider = ["cards", "main"];
 let currSlider = 1;
 let timing = 600;
 let currAdvantage = 0;
+let cardCurr = 1;
 
-let slideCount, slideWidth, slideHeight, slideCurr = 1
+let slideCount, slideWidth, slideHeight, slideCurr = 0
 $(function () {
     setTimeout(() => {
         resizeEvent()
@@ -20,11 +21,27 @@ $(function () {
         $(".slider-left-arrow").on("click touchstart", function () {
             move(-1);
         });
+
+        let flag = false
+        $(".dark-bg").on("click touchstart", function () {
+            if(flag) return;
+            flag = true;
+            $(".facts-overlay").fadeOut("fast");
+            $(`.active-fact-inf`).fadeOut().removeClass("active-fact-inf");
+            setTimeout(function(){ flag = false; }, 300);
+        })
+        $(".adv2-inf").on("click touchstart", function () {
+            if(flag) return;
+            flag = true;
+            $(`#f${$(this).parent().parent().data("fact")}`).fadeIn().addClass("active-fact-inf");
+            $(".facts-overlay").fadeIn("fast");
+            setTimeout(function(){ flag = false; }, 300);
+        })
     }, 3)
 });
 function updateSliderData(p = 0){
     currSlider += p
-    slideCurr = 1;
+    slideCurr = 0;
     slideCount = $("#" + slider[currSlider] + "-slider ul img").length;
     slideWidth = $("#" + slider[currSlider] + "-slider ul img").width();
     slideHeight = $("#" + slider[currSlider] + "-slider ul img").height();
@@ -33,11 +50,16 @@ function updateSliderData(p = 0){
     $("#cards-max").text(slideCount)
     UpdateSlides()
 }
-function UpdateSlides(){
+function UpdateSlides(d = 0){
     $(`#${slider[currSlider]}-slider ul img`).each(function (index){
         $(this).css({left: slideWidth * (index - slideCurr)});
     })
-    $("#cards-current").text(slideCurr + 1)
+    if(cardCurr + d == 0) cardCurr = slideCount + 1
+    if(cardCurr + d == slideCount + 1) cardCurr = 0
+    $(".active-card-info").removeClass("active-card-info").fadeOut("fast", () => {
+        $(`#${cardCurr + d}.card-info`).addClass("active-card-info").fadeIn("fast")
+    })
+    $("#cards-current").text(cardCurr + d)
 }
 function move(dir = 0){
     if(inMove) return;
@@ -51,7 +73,7 @@ function move(dir = 0){
         $(`#${slider[currSlider]}-slider.slider ul img:first`).appendTo( $(`#${slider[currSlider]}-slider.slider ul`) )
         slideCurr--;
     }
-    UpdateSlides()
+    UpdateSlides(dir)
 
     $(`#${slider[currSlider]}-slider.slider ul img`).each(function (index){
         $(this).stop().animate({
@@ -61,6 +83,7 @@ function move(dir = 0){
     setTimeout(function () {
         inMove = false
         slideCurr += dir;
+        cardCurr += dir;
     }, timing);
 }
 
@@ -84,7 +107,6 @@ function navEvent() {
     $("#nav-collapsed").slideToggle();
 }
 function resizeEvent() {
-    document.title = $(window).height()
     $("#landscape-container").css({
         top: (($(window).height() - $("#landscape-container").height()) / 2)
     })
