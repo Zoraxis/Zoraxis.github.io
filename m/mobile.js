@@ -1,10 +1,11 @@
 let timer = false
 let inMove = false
-let slider = ["cards", "main"];
-let currSlider = 1;
-let timing = 600;
-let currAdvantage = 0;
-let cardCurr = 1;
+let slider = ["cards", "main"]
+let currSlider = 1
+let timing = 600
+let currAdvantage = 0
+let cardCurr = 1
+
 
 let slideCount, slideWidth, slideHeight, slideCurr = 0
 $(function () {
@@ -12,7 +13,7 @@ $(function () {
         resizeEvent()
         $("#nav-burger").click(navEvent)
         $(".nav-to").click(navEvent)
-        $(".card").on("click touchstart", cardsEvent)
+        $(".card").on("click touchstart", () => {touchCallback = cardsEvent})
         $("#close-cards").on("click touchstart", cardsEvent);
         updateSliderData(0)
         $(".slider-right-arrow").on("click touchstart", function () {
@@ -28,20 +29,44 @@ $(function () {
             flag = true;
             $(".facts-overlay").fadeOut("fast");
             $(`.active-fact-inf`).fadeOut().removeClass("active-fact-inf");
-            setTimeout(function(){ flag = false; }, 300);
+            setTimeout(function(){ flag = false; }, 300)
         })
         $(".adv2-inf").on("click touchstart", function () {
             if(flag) return;
             flag = true;
             $(`#f${$(this).parent().parent().data("fact")}`).fadeIn().addClass("active-fact-inf");
             $(".facts-overlay").fadeIn("fast");
-            setTimeout(function(){ flag = false; }, 300);
+            setTimeout(function(){ flag = false; }, 300)
+        })
+        
+
+        $(document.body).on("touchstart", function(e){
+            touchStart = e.originalEvent.touches[0].pageY
+            touchEnd = -1
+        })
+        $(document.body).on("touchend", function(e){
+            touch = false
+            touchEnd = e.changedTouches[0].pageY
+            if(touchCallback != null){
+                if(touchEnd <= touchStart + threshhold && touchEnd >= touchStart - threshhold) {
+                    touchCallback()
+                    touchCallback = null
+                }
+            }
+            touchStart = -1
         })
     }, 3)
 });
+
+let touchEnd = -1;
+let touchStart = -1;
+let touchCallback = null;
+let threshhold = 5
+
 function updateSliderData(p = 0){
     currSlider += p
     slideCurr = 0;
+    cardCurr = 1;
     slideCount = $("#" + slider[currSlider] + "-slider ul img").length;
     slideWidth = $("#" + slider[currSlider] + "-slider ul img").width();
     slideHeight = $("#" + slider[currSlider] + "-slider ul img").height();
