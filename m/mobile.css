@@ -165,11 +165,6 @@ img {
     opacity: 0;
     transform: translate(0, 20px);
 }
-
-.full{
-    width: 100vw;
-    height: 100vh;
-}
 #cards-overlay{
     background-color: white;
 
@@ -242,19 +237,3 @@ img {
     height: 100%;
 }
 
-.dark-bg{
-    background-color: #000;
-    opacity: 35%;
-}
-#fact-overlay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    letter-spacing: -0.24px;
-    width: 82.5641025%;
-    padding: 16px;
-    background-color: white;
-    border-radius: 5px;
-}

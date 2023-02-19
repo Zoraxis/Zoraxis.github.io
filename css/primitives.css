@@ -36,8 +36,23 @@ body {
     justify-content: center;
     align-items: center;
 }
+.round-btn{
+    padding: 11px 16px;
+    border-radius: 6px;
+}
+.outline-btn{
+    border: 1.5px solid #071C35;
+    color: var(--dark-color);
+    user-select: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .btn-wide{
     letter-spacing: 2px;
+    text-transform: uppercase;
     text-transform: uppercase;
 }
 .s-btn{
@@ -71,6 +86,7 @@ body {
     /* height: 240px; */
     height: 22.222vh;
     text-align: center;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
@@ -90,6 +106,7 @@ body {
 }
 .border-box{box-sizing: border-box;}
 .mw0{min-width: 0px;}
+.mw200{max-width: 200px;}
 .f60{
     max-width: 60.743%;
     width: 60.743%;
@@ -101,6 +118,11 @@ body {
 .f-half{flex: 0 0 47.778%}
 
 .h32 {height: 32px;}
+
+.pt48 {padding-top: 48px;}
+.pb48 {padding-bottom: 48px;}
+
+.g14 {gap: 14px;}
 
 .mb48 {margin-bottom: 48px;}
 .mb37 {margin-bottom: 37px;}
@@ -124,17 +146,24 @@ body {
 .container {
     /* width: 1139px; */
     position: relative;
+    margin-left: 14.453%; /*275.5px*/
+    margin-right: 14.453%;
+    width: auto;
+	float: none !important; 
+}
+ /* .container {
+    position: relative;
     width: 68.281vw;
 	margin: 0 auto !important; 
 	float: none !important; 
-}
+}  */
 .mini-container{
     width: 88.229%;
     margin-left: auto;
     margin-right: auto;
 }
 .block{
-    margin-bottom: 82px;
+    margin-bottom: 70px;
     position: relative;
 }
 .absolute-center{
@@ -165,6 +194,26 @@ body {
     z-index: 5;
     top: 0;
     left: 0;
+}
+.full{
+    width: 100vw;
+    height: 100vh;
+}
+.dark-bg{
+    background-color: #000;
+    opacity: 35%;
+}
+#fact-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    letter-spacing: -0.24px;
+    width: 82.5641025%;
+    padding: 16px;
+    background-color: white;
+    border-radius: 5px;
 }
 #loader{
     background-color: white;

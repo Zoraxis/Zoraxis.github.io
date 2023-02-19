@@ -11,7 +11,7 @@
     width: 48.583%;
     color: white;
     position: relative;
-    margin-bottom: 04.444vh;
+    margin-top: 04.444vh;
 }
 .card img{
     width: 100%;
@@ -59,4 +59,17 @@
 }
 #icon svg{
     position: absolute;
+}
+#advs1-grad{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70.38%);
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}
+.blue-bg{background: #F7F9FA;}
+#fact-overlay{
+    max-width: 442px;
+    padding: 24px;
+    border-radius: 7px;
 }

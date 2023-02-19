@@ -1,32 +1,28 @@
-#icon{
+#icon svg g{
     /* width: 160px; */
     width: 11.111%;
     height: 155px;
+}
+#icon{
     position: absolute;
     top: 0%;
-}
-#placeholder-icon{
-    width: 11.111%;
-    height: 155px;
-    visibility: hidden;
+    left: 0%;
 }
 #icon svg g{
     box-shadow: 0px 4px 16px rgba(28, 38, 83, 0.08);
 }
 #nav-menu{
-    max-width: 100%;
-    /* gap: 102px; */
-    /* gap: 08.955%; */
-    /* gap: calc((102px / 100vw) * 100vw); */
-    gap: 9vw;
-    /* justify-content: space-between; */
     max-height: 81px;
+    min-height: 81px;
 }
 .nav-items{
-    /* gap: 38px; */
-    gap: 03.336%;
-    width: calc(100% + 90px);
-    text-transform: uppercase;
+    gap: 44px;
+    /* gap: 03.336%; */
+    /* text-transform: uppercase; */
     /* justify-content: space-between; */
     position: relative;
+}
+#nav-num{
+    position: absolute;
+    right: 0%;
 }
