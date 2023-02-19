@@ -6,6 +6,7 @@
 }
 html{
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 a{
     text-decoration: none;
@@ -143,20 +144,12 @@ body {
 .mr32{margin-right: 01.666vw}
 .mr12{margin-right: 12px}
 
-.container {
-    /* width: 1139px; */
+ .container {
     position: relative;
-    margin-left: 14.453%; /*275.5px*/
-    margin-right: 14.453%;
-    width: auto;
-	float: none !important; 
-}
- /* .container {
-    position: relative;
-    width: 68.281vw;
+    width: 71,094vw;
 	margin: 0 auto !important; 
 	float: none !important; 
-}  */
+} 
 .mini-container{
     width: 88.229%;
     margin-left: auto;
