@@ -2,8 +2,8 @@ let flag = false;
 let factId = 0;
 
 $(function () {
-    $( window ).resize(fixSize)
-    fixSize()
+    // $( window ).resize(fixSize)
+    // fixSize()
 
     $("#plan-detailed-btn").bind("click touchstart", function () {
         callFlag(() => {
@@ -57,9 +57,9 @@ $(function () {
         }, 300);
     }
 
-    function fixSize(){
-        $("#icon svg").css({
-            transform: `scale(${$(window).width() / 1920})`,
-        })
-    }
+    // function fixSize(){
+        // $("#icon svg").css({
+            // transform: `scale(${$(window).width() / 1920})`,
+        // })
+    // }
 })

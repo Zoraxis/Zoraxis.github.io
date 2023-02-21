@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
@@ -55,8 +55,8 @@
         </div>
         <div id="loader"></div>
         <div id="main">
-            <nav id="nav-menu" class="container flex allign-center">
-                <div id="icon">
+            <nav id="nav-menu" data-h="81" data-w="1365" class="fix container flex allign-center">
+                <div class="fix" data-w="192" id="icon">
                     <svg class="overflow" xmlns="http://www.w3.org/2000/svg" style="transform-origin: top left;" width="192"
                         height="155" viewBox="17 0 192 155" fill="none">
                         <g filter="url(#filter0_d_41_600)">
@@ -170,10 +170,10 @@
                 <div class="relative absolute-center">
                     <div class="nav-items fw6 fs18 flex justify-center">
                         <a href="#plans" class="nav-to">Квартири</a>
-                        <a href="#location" class="nav-to">Локація</a>
-                        <a href="#advantages2" class="nav-to">Інфраструктура</a>
-                        <a href="#gallery" class="nav-to">Галерея</a>
-                        <a href="#about" class="nav-to">Про проєкт</a>
+                        <a data-ml="44" href="#location" class="nav-to fix">Локація</a>
+                        <a data-ml="44" href="#advantages2" class="nav-to fix">Інфраструктура</a>
+                        <a data-ml="44" href="#gallery" class="nav-to fix">Галерея</a>
+                        <a data-ml="44" href="#about" class="nav-to fix">Про проєкт</a>
                     </div>
                 </div>
         
@@ -182,9 +182,9 @@
                 </div>
             </nav>
             <div id="video-block" class="block">
-                <video src="media/bomb.mp4" autoplay loop muted>
+                <video src="media/short_promo_pro3.mp4" autoplay loop muted>
                 </video>
-                <div class="blur-block player-overlay" id="lplayer-overlay">
+                <div data-w="640" class="fix blur-block player-overlay" id="lplayer-overlay">
                     <div class="fw6 fs48 mb37">Кольчинський квартал</div>
                     <div class="fw5 fs16 mb9">Готовність</div>
                     <div class="fw7 fs18 mb19">I квартал 2023</div>
@@ -203,8 +203,8 @@
             <div class="mini-container block">
                 <div id="about" class="block">
                     <div class="fw6 fs36 mb48">Про проєкт</div>
-                    <div class="flex mb48" id="about-details">
-                        <img class="f60 mr" src="media/about/preview.png">
+                    <div data-h="515" class="fix flex mb48 details">
+                        <img class="f60 mr cover" src="media/about/preview.png">
                         <div class="f30">
                             <div class="fw6 fs26 mb32">«Кольчинський квартал» — це елітний житловий комплекс клубного типу, який пропонує Вам сучасний стиль життя в затишному зеленому куточку Закарпаття</div>
                             <div class="fw5 fs21 mb37">Квартири в елітному житловому комплексі клубного типу Кольчинський квартал у затишному зеленому куточку Закарпаття в історичному селищі Кольчино неподалік від міста Мукачево. Уявіть собі неймовірний вид на гори, чисте повітря та душевний спокій – ось характерні риси ЖК Кольчинський квартал. Насолоджуйтесь захоплюючим видом на гори з вікон, проживаючи в комфорті. Відчуйте найкраще життя з максимальною безпекою в Кольчинському кварталі.</div>
@@ -212,18 +212,18 @@
                         </div>
                     </div>
                     
-                    <div class="justify-between flex">
-                        <img class="card" src="media/about/splan.png">
-                        <img class="card" src="media/about/layout.png">
+                    <div data-h="858" class="fix justify-between flex">
+                        <img class="card cover" src="media/about/splan.png">
+                        <img class="card cover" src="media/about/layout.png">
                     </div>
                 </div>
                 <div id="important" class="block">
                     <div class="fw6 fs36 mb48">Важливо</div>
-                    <div class="flex" id="about-details">
-                        <img class="f60 mr" src="media/important/generator1.png">
+                    <div class="flex details">
+                        <img class="f60 mr cover" src="media/important/generator1.png">
                         <div class="f30">
                             <div class="fw6 fs26 mb32">Отримай генератор при покупці квартири у ЖК Кольчинський квартал!</div>
-                            <div class="fw5 fs21 mb37 lh20">Купівля квартири може бути непростим завданням. Але коли ви купуєте її у нас, ми подбаємо про вас! Як особливий подарунок ми надаємо кожному нашому клієнту власний генератор. Цей генератор надасть Вам автономність щодо їхніх індивідуальних потреб в електриці, дозволяючи Вам залишатися в теплі та комфорті, не турбуючись про купівлю особисто. Придбавши квартиру та отримавши генератор у подарунок, ви можете бути впевнені, що ваш новий будинок буде затишним і безпечним у будь-яку пору року.</div>
+                            <div class="fw5 fs21 mb37 ">Купівля квартири може бути непростим завданням. Але коли ви купуєте її у нас, ми подбаємо про вас! Як особливий подарунок ми надаємо кожному нашому клієнту власний генератор. Цей генератор надасть Вам автономність щодо їхніх індивідуальних потреб в електриці, дозволяючи Вам залишатися в теплі та комфорті, не турбуючись про купівлю особисто. Придбавши квартиру та отримавши генератор у подарунок, ви можете бути впевнені, що ваш новий будинок буде затишним і безпечним у будь-яку пору року.</div>
                             <!-- <span class="fill-btn btn-wide s-btn fw7 fs16">Детальніше</span> -->
                         </div>
                     </div>
@@ -314,7 +314,7 @@
                                         <rect width="48" height="36" rx="7" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">Цегляні стіни</div>
+                                <div data-desc="Натуральний матеріал, міцний та стійкий до будь-яких погодних умов. " class="fw5 fs24">Цегляні стіни</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -325,7 +325,7 @@
                                         <rect width="30" height="44" rx="12.5" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div class="fw5 fs24 txt-center mw200">Індивідуальне опалення</div>
+                                <div data-desc="Кожна квартира має свій сучасний котел, який швидко та економно обігріє вашу оселю. Також Ви маєте можливість за допомогою існуючого Wi-Fi модулю на котлі вмикати і регулювати температуру нагрівача дистанційно, з будь якої точки світу! Також є можливість встановити за бажанням камін, це дуже зручно і романтично!" class="fw5 fs24 txt-center mw200">Індивідуальне опалення</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -337,7 +337,7 @@
                                         <rect width="51" height="48" rx="24" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">Власний паркінг</div>
+                                <div data-desc="На ділянці житлового комплексу розташовані зручні паркомісця для вашого авто! Є можливість тримати залізного друга під накриттям!" class="fw5 fs24">Власний паркінг</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -350,7 +350,7 @@
                                         <rect width="47" height="34" rx="6" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">Тераса</div>
+                                <div data-desc="Справжньою перлиной житлового комплекса є наша тераса, з якої можливо цілий рік милуватися красою закарпатських гор, приймати сонячні ванни, займатися фітнесом, та плескатись в джакузі!" class="fw5 fs24">Тераса</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -366,7 +366,7 @@
                                         <rect width="37" height="45" rx="6" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">Бомбосховище</div>
+                                <div data-desc="Житловий комплекс обладнан власним бомбосховищем, на випадок повітряних тривог." class="fw5 fs24">Бомбосховище</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -378,7 +378,7 @@
                                         <rect width="45" height="44" rx="22" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">Вільне планування</div>
+                                <div data-desc="Згідно бажанням власника квартири можливо вільне планування та розташування (окрім несучих стін). Досвідчені архітектори безкоштовно нададуть поради господарю!" class="fw5 fs24">Вільне планування</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -392,7 +392,7 @@
                                         <rect width="40" height="47" rx="20" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">Зони відпочинку</div>
+                                <div data-desc="Житловий комплекс має власні зони відпочинку — дитячий майданчик, зони барбекю, спортивний майданчик, терасу із солярієм та джакузі, затишні ділянки з хвойними рослинами. Також в 900 м знаходиться релакс комлекс з двома відкритими басейнами, банею та рестораном." class="fw5 fs24">Зони відпочинку</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -405,7 +405,7 @@
                                         <rect width="44" height="44" rx="22" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">40 км до кордону</div>
+                                <div data-desc="ЖК Кольчино має дуже зручне розташування до кордону! Від ЖК до найближчого пункту пропуску всього 40 км до Угорщини, 65 км до Словачини." class="fw5 fs24">40 км до кордону</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -418,7 +418,7 @@
                                         <rect width="52" height="45" rx="12" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div class="fw5 fs24 txt-center mw200">0,5 км до траси Київ - Чоп</div>
+                                <div data-desc="ЖК дуже зручно розтошован відносно траси міжнародного значення Київ-Чоп, всього в 700 м від неї, але настільки вдало, що трасу з комплексу і не чути і не бачити!" class="fw5 fs24 txt-center mw200">0,5 км до траси Київ - Чоп</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -430,7 +430,7 @@
                                         <rect width="39" height="52" rx="19.5" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div data-desc="" class="fw5 fs24">2,8 км до Мукачево</div>
+                                <div data-desc="ЖК розташован від міста Мукачево на відстані 3,5 км, від Єпіцентру 2,8 км, від Ужгорода 46 км." class="fw5 fs24">2,8 км до Мукачево</div>
                             </div>
                             <div class="fact">
                                 <div class="adv2-icons">
@@ -443,7 +443,7 @@
                                         <rect width="45" height="44" rx="11" fill="#E5F1FA"/>
                                     </svg>
                                 </div>
-                                <div class="fw5 fs24 txt-center mw200">5 км до озера Кленовець</div>
+                                <div data-desc="На відстані 2.8 км є чудова зона відпочинку —Кліновецьки озера, ту кожний знайде собі і рибалку, і альтанки, і спортивні майданчики посеред чудових озер!" class="fw5 fs24 txt-center mw200">5 км до озера Кленовець</div>
                             </div>
                         </div>
                     </div>
@@ -649,6 +649,7 @@
     <script src="js/script.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/fixer.js"></script>
 </body>
 
 </html>
