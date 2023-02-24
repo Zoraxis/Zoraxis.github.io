@@ -2,9 +2,6 @@ let flag = false;
 let factId = 0;
 
 $(function () {
-    // $( window ).resize(fixSize)
-    // fixSize()
-
     $("#plan-detailed-btn").bind("click", function () {
         callFlag(() => {
             $(".plan-full").slideToggle("fast")
@@ -47,12 +44,6 @@ $(function () {
             }
         })
     })
-
-    // function fixSize(){
-        // $("#icon svg").css({
-            // transform: `scale(${$(window).width() / 1920})`,
-        // })
-    // }
 })
 
 function callFlag(action) {
@@ -63,10 +54,3 @@ function callFlag(action) {
         flag = false;
     }, 300);
 }
-
-function check() { 
-    requestAnimationFrame(check)
-    // console.log(flag)
-    document.title = flag
-}
-check()
