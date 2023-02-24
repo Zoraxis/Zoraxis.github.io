@@ -50,9 +50,9 @@ $(function () {
             if(touchCallback != null){
                 if(touchEnd <= touchStart + threshhold && touchEnd >= touchStart - threshhold) {
                     touchCallback()
-                    touchCallback = null
                 }
             }
+            touchCallback = null
             touchStart = -1
         })
     }, 3)
@@ -152,3 +152,10 @@ function resizeEvent() {
     }
 }
 $(window).resize(resizeEvent)
+
+function check(){
+    requestAnimationFrame(check)
+    console.log(touchCallback)
+    document.title = touchCallback == null ? "no" : "yes"
+}
+check()
