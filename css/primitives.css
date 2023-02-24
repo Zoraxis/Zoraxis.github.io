@@ -99,6 +99,14 @@ body {
     position: relative;
     z-index: 2;
 }
+.blur-block{
+    position: absolute;
+    background: rgba(217, 217, 217, 0.01);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 18px 20px;
+    color: white;
+}
 .adv2-icons svg:last-child{
     position: absolute;
     left: 50%;

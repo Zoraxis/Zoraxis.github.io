@@ -10,14 +10,6 @@
     user-select: none;
     object-fit: fill;
 }
-.blur-block{
-    position: absolute;
-    background: rgba(217, 217, 217, 0.01);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    padding: 18px 20px;
-    color: white;
-}
 .player-overlay{
     bottom: 14.629%;
 }
