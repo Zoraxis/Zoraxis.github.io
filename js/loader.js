@@ -1,3 +1,5 @@
 $(function() {
-    $("#loader").fadeOut("slow")
+    setTimeout(() => {
+        $("#loader").fadeOut("slow")
+    }, 1)
 });

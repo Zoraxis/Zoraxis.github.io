@@ -5,7 +5,7 @@ $(function () {
     // $( window ).resize(fixSize)
     // fixSize()
 
-    $("#plan-detailed-btn").bind("click touchstart", function () {
+    $("#plan-detailed-btn").bind("click", function () {
         callFlag(() => {
             $(".plan-full").slideToggle("fast")
             var txt = $(this).text()
@@ -13,7 +13,7 @@ $(function () {
                 .data("alt", txt)
         })
     })
-    $("#adv1-det").bind("click touchstart", function () {
+    $("#adv1-det").bind("click", function () {
         callFlag(() => {
             $(".card-extra").slideToggle(500)
             $("#advs1-grad").fadeToggle()
@@ -25,7 +25,7 @@ $(function () {
     $(".fact").each(function (index) {
         $(this).children().last().attr("id", "f" + index).data("id", index);
     })
-    $(".fact").bind("click touchstart", function () {
+    $(".fact").bind("click", function () {
         callFlag(() => {
             let target = $(this).children("div").last()
             factId = target.data("id")
@@ -35,7 +35,7 @@ $(function () {
                 .next().fadeIn()
         })
     })
-    $("#next-fact").bind("click touchstart", function () {
+    $("#next-fact").bind("click", function () {
         callFlag(() => {
             if (factId + 1 > 11) {
                 $(this).parent().fadeOut().next().fadeOut()
@@ -48,18 +48,25 @@ $(function () {
         })
     })
 
-    function callFlag(action) {
-        if (flag) return;
-        flag = true;
-        action();
-        setTimeout(function () {
-            flag = false;
-        }, 300);
-    }
-
     // function fixSize(){
         // $("#icon svg").css({
             // transform: `scale(${$(window).width() / 1920})`,
         // })
     // }
 })
+
+function callFlag(action) {
+    if (flag) return;
+    flag = true;
+    action();
+    setTimeout(() => {
+        flag = false;
+    }, 300);
+}
+
+function check() { 
+    requestAnimationFrame(check)
+    // console.log(flag)
+    document.title = flag
+}
+check()
