@@ -152,10 +152,3 @@ function resizeEvent() {
     }
 }
 $(window).resize(resizeEvent)
-
-function check(){
-    requestAnimationFrame(check)
-    console.log(touchCallback)
-    document.title = touchCallback == null ? "no" : "yes"
-}
-check()
