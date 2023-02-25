@@ -106,7 +106,7 @@ img {
     height: 166px;
     text-align: center;
     line-height: 300px;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .slider ul {
@@ -128,10 +128,7 @@ img {
     width: auto;
     height: auto;
     background: #2a2a2a;
-    color: #fff;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
     opacity: 0.8;
     cursor: pointer;
 }
