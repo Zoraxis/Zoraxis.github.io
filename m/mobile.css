@@ -105,62 +105,7 @@ img {
     margin-top: 10px;
     gap: 5px;
 }
-.ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
 
-.hamRotate.active {
-    transform: rotate(45deg);
-}
-
-.line {
-    fill: none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #000;
-    stroke-width: 1;
-    stroke-linecap: round;
-}
-
-.ham8 .top {
-    stroke-dasharray: 40 160;
-    transition: 200ms;
-}
-
-.ham8 .middle, .ham8 .middle2{
-    stroke-dasharray: 40 142;
-    transform-origin: 50%;
-    transition: transform 400ms;
-}
-
-.ham8 .bottom {
-    stroke-dasharray: 40 85;
-    transform-origin: 50%;
-    transition: 200ms;
-    transition-delay: 100ms;
-}
-
-.ham8.active .top {
-    opacity: 0;
-    transform: translate(0, -20px);
-}
-
-.ham8.active .middle {
-    transform: rotate(90deg);
-}
-.ham8.active .middle2 {
-    transform: rotate(-180deg);
-}
-
-.ham8.active .bottom {
-    opacity: 0;
-    transform: translate(0, 20px);
-}
 #cards-overlay{
     background-color: white;
 

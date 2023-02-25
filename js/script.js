@@ -44,8 +44,12 @@ $(function () {
             }
         })
     })
+    $("#nav-burger").click(navEvent)
+    $(".nav-to").click(navEvent)
 })
-
+function navEvent() { 
+    $("#nav-items-collapsed").slideToggle();
+}
 function callFlag(action) {
     if (flag) return;
     flag = true;
