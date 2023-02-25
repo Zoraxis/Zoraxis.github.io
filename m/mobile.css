@@ -85,22 +85,6 @@ img {
     background-color: #E5F1FA;
 }
 
-#landscape {
-    position: sticky;
-    left: 0px;
-    top: 0px;
-    z-index: 6;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-}
-
-#landscape-container {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
 .nav-items {
     margin-top: 10px;
     gap: 5px;

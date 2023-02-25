@@ -59,3 +59,21 @@ h2{color: #071C35}
 	float: none!important;
 }
 .shadow{ box-shadow: 0px 4px 16px rgba(28, 38, 83, 0.08);}
+
+#landscape {
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    z-index: 6;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+#landscape-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.flex-column{flex-direction: column;}

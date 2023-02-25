@@ -9,3 +9,12 @@ function check() {
 if(check()){
     window.location.replace("/m");
 }
+
+$(window).resize(() => {
+    if($(window).height() > $(window).width()){
+        $('#landscape').fadeIn();
+    }
+    else{
+        $('#landscape').fadeOut();
+    }
+})
