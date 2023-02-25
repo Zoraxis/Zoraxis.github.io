@@ -45,7 +45,4 @@ function ResizeFix() {
             $(this).css('font-size', $(this).data('f') + ((currW - fontTop) / fontInterval * fonUpScale))
         })
     }
-    
-    
-    console.log(coefW + " : " + $("#nav-menu").width())
 }
