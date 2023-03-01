@@ -16,6 +16,7 @@
 .card img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .facts{
     /* gap: 31px; */
@@ -26,7 +27,7 @@
     margin-bottom: -10px;
 }
 .plans{
-    gap: 02.604vw;
+    gap: 02.57vw;
 }
 .plan{
     width: 27.4135vw;

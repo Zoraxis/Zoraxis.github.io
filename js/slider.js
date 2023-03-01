@@ -2,9 +2,16 @@ let imgs = $(".slider-img")
 let curr = 2;
 let init = false;
 
-let defWidth = 33.3333;
-let bigWidth = 40;
-let defHeight = 9;
+// let defWidth = 33.3333;
+// let bigWidth = 40;
+let coef = ($(window).width() / 1920);
+let defWidth = (1693  * coef) / 3;
+let bigWidth = defWidth + (defWidth * 0.35);
+coef = ($(window).height() / 961);
+let baseHeight = 320 * coef;
+let bigHeight = 410 * coef;
+
+let topSmall = (bigHeight - baseHeight) / 2;
 
 let inMove = false;
 let round = 1;
@@ -13,14 +20,16 @@ $(function () {
     imgs.each(function (index) {
         $(this).attr('id', (index + 1))
         $(this).css({
-            width: `${defWidth}%`,
-            left: `${index * defWidth}%`,
-            top: `${defHeight}%`
+            width: `${defWidth}px`,
+            height: `${baseHeight}px`,
+            left: `${index * defWidth}px`,
+            top: `${topSmall}px`
         })
         if (index + 1 == curr) {
             $(this).css({
-                width: `${bigWidth}%`,
-                left: `${index * defWidth - ((bigWidth - defWidth) / 2)}%`,
+                width: `${bigWidth}px`,
+                height: `${bigHeight}px`,
+                left: `${index * defWidth - ((bigWidth - defWidth) / 2)}px`,
                 zIndex: 2,
                 top: "0%"
             })
@@ -33,7 +42,7 @@ function resizeEvent(){
     setTimeout(() => {
         $(".slider-shadow").css({
             height: imgs.eq(curr - 2).height(),
-            top: (defHeight + "%")
+            top: (topSmall + "px")
         })
         $(".slider-arrow").css({
             top: (((imgs.eq(curr - 1).height() * 0.5) - ($(".slider-arrow").height() / 2)) + "px")
@@ -54,7 +63,7 @@ function UpdateSlides(move) {
         $('.slider').prepend($(".slider-img:last-child").clone());
         clone = $(".slider-img:last-child");
         $('.slider-img:first-child').css({
-            left: `${-defWidth}%`
+            left: `${-defWidth}px`
         })
         imgs = $('.slider-img')
         curr++;
@@ -65,7 +74,7 @@ function UpdateSlides(move) {
         $('.slider').append($(".slider-img:first-child").clone())
         clone = $(".slider-img:first-child");
         $('.slider-img:last-child').css({
-            left: `${defWidth * 3}%`
+            left: `${defWidth * 3}px`
         })
         imgs = $('.slider-img')
         prev = -1;
@@ -76,8 +85,9 @@ function UpdateSlides(move) {
     }
 
     $("#" + (curr + move)).animate({
-        width: `${bigWidth}%`,
-        top: `-=${defHeight}%`,
+        width: `${bigWidth}px`,
+        height: `${bigHeight}px`,
+        top: `-=${topSmall}px`,
     }, {
         start: function () {
             $(this).css("z-index", "2")
@@ -86,8 +96,9 @@ function UpdateSlides(move) {
         queue: false
     })
     $("#" + (curr)).animate({
-        width: `${defWidth}%`,
-        top: `+=${defHeight}%`
+        width: `${defWidth}px`,
+        height: `${baseHeight}px`,
+        top: `+=${topSmall}px`
     }, {
         start: function () {
             $(this).css("z-index", "1")
@@ -99,7 +110,7 @@ function UpdateSlides(move) {
         let left = ((index + 2 + -move) - curr) * defWidth;
         if (index + 1 == curr + move) left -= (bigWidth - defWidth) / 2;
         $(this).animate({
-            left: `${left}%`,
+            left: `${left}px`,
         }, {
             duration: timing,
             queue: false,
