@@ -13,7 +13,7 @@ $(function () {
         resizeEvent()
         $("#nav-burger").click(navEvent)
         $(".nav-to").click(navEvent)
-        $(".card").on("click touchstart", () => {touchCallback = cardsEvent})
+        // $(".card").on("click touchstart", () => {touchCallback = cardsEvent})
         $("#close-cards").on("click touchstart", cardsEvent);
         updateSliderData(0)
         $(".slider-right-arrow").on("click touchstart", function () {
