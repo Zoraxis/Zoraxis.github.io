@@ -27,6 +27,7 @@ img{
 .r2c1{ grid-area: 1 / 1 / 3 / 2; }
 .r3c3{ grid-area: 1 / 1 / 3 / 3; }
 h2{color: #071C35}
+.y-invert{ transform: scale(-1, 1);}
 
 /* ----------------------------- */
 #overlay{
