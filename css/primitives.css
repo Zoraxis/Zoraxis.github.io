@@ -353,6 +353,7 @@ body {
     border: 1.25px solid #E5E5E5;
     height: 100%;
     border-radius: 4px 0 0 4px;
+    outline: 0px;
 }
 #number-input, #number-input::placeholder{
     font-size: 1em;

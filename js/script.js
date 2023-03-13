@@ -47,43 +47,34 @@ $(function () {
     $("#nav-burger").click(navEvent)
     $(".nav-to").click(navEvent)
     $("#order-call-btn").click(function () {
-        //   $.ajax(
-        //     {
-        //         method: 'POST',
-        //         url: "https://api.mailgun.net/v3/sandboxcfc72f239b864dd9814fc7a469965f80.mailgun.org/messages",
-        //         headers: {
-        //             "Authorization": "Basic YXBpOjdlMWU1ZDQ3NmE2OWRjMmVjMzYyOTNmNDBiMWJiOGFkLWIzNmQyOTY5LWI2OTY1OGYw"
-        //         },
-        //         data: {
-        //             from: 'Mailgun Sandbox <postmaster@sandboxcfc72f239b864dd9814fc7a469965f80.mailgun.org>',
-        //             to: 'Dr Zork <b.v.o0077@gmail.com>',
-        //             subject: 'Hello Dr Zork',
-        //             text: 'Congratulations Dr Zork, you just sent an email with Mailgun!  You are truly awesome!'
-        //         }
-        //     }
-        //   ).done(function (response) {
-        //     console.log(response);
-        //   });
+        let error = null;
+        const val = $('#number-input').val()
+        if(!val.length) error = 'e';
+        else if(val.length > 11) error = 'b';
+        else if(val.length < 7) error = 's';
 
-        var settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://api.telegram.org/" + '5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI' + "/sendMessage",
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json",
-            "cache-control": "no-cache"
-          },
-          "data": JSON.stringify({
-            "chat_id": 835560276,
-            "text": 'hi there'
-          })
+        if(error){
+            $(this).prev().css('border', '2px solid red');
+            $('#call-help').css('color', 'red').text('Телефон не може бути ' + callStates[error]);
+            return;
         }
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-        }); 
-    })
+
+        const bot = new Bot("5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI", "835560276");
+        bot.sendMessage(val, null, null, false)
+    });
+    $("#number-input").on('input propertychange', function () { 
+        $(this).css('border', '1.25px solid #E5E5E5');
+        $('#call-help').css('color', 'grey').text(normal);
+    });
 })
+
+const normal = 'Наприклад: 097 000 00 00  '
+const callStates = {
+    e: "пустим",
+    s: "коротше за 7 символiв",
+    b: "довший за 11 символiв"
+}
+
 function navEvent() { 
     $("#nav-items-collapsed").slideToggle();
 }
