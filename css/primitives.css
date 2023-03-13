@@ -225,11 +225,18 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
 }
+.absolute-full-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 .txt-fix{white-space: nowrap;}
 .grey{color: #74747B;}
 .white{color: white;}
 .overflow{overflow: visible;}
 .no-overflow{overflow: hidden;}
+.no-select{user-select: none;}
 .pointer{cursor: pointer;}
 .txt-center{text-align: center;}
 .uppercase{text-transform: uppercase;}
@@ -253,15 +260,12 @@ body {
     width: 100vw;
     height: 100vh;
 }
+.fixed { position: fixed; }
 .dark-bg{
     background-color: #000;
     opacity: 35%;
 }
 #fact-overlay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 10;
     letter-spacing: -0.24px;
     width: 82.5641025%;
@@ -316,4 +320,45 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+#call-btn{
+    width: 100px;
+    height: 100px;
+    background: #0062FF;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    bottom: 2.5%;
+    left: 2.5%;
+    text-transform: uppercase;
+    position: fixed;
+}
+
+#call-btn p{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -80%);
+}
+#call-overlay{
+    z-index: 10;
+    background-color: white;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+}
+#call-order{
+    border-radius: 4px;
+}
+#number-input{
+    padding: 16px 12px;
+    border: 1.25px solid #E5E5E5;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+}
+#number-input, #number-input::placeholder{
+    font-size: 1em;
+}
+#order-call-btn{
+    background: #0062FF;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
 }

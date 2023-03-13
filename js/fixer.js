@@ -27,9 +27,11 @@ function ResizeFix() {
         if($(this).data('w')) $(this).width(parseFloat($(this).data('w')) * 1 * coefW)
         if($(this).data('h')) $(this).height(parseFloat($(this).data('h')) * 1 * coefH)
         if($(this).data('g')) $(this).css({gap: parseFloat($(this).data('g')) * coefW})
+        if($(this).data('mt')) $(this).css({marginTop: parseFloat($(this).data('mt')) * coefH})
         if($(this).data('ml')) $(this).css({marginLeft: parseFloat($(this).data('ml')) * coefW})
         if($(this).data('mr')) $(this).css({marginRight: parseFloat($(this).data('mr')) * coefW})
         if($(this).data('mb')) $(this).css({marginBottom: parseFloat($(this).data('mb')) * coefH})
+        if($(this).data('s')) $(this).css({transform: `scale(${coefW})`})
 
         $("#icon svg").css({
             transform: `scale(${coefW})`,

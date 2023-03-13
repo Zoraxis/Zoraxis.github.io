@@ -41,7 +41,7 @@
             </div>
         </div>
         <div id="overlay">
-            <div id="fact-overlay" style="display: none;">
+            <div id="fact-overlay" class="absolute-full-center" style="display: none;">
                 <div class="flex justify-between">
                     <div id="fact-overlay-name" class="fw6 fs18"></div>
                     <svg onclick="$(this).parent().parent().fadeOut().next().fadeOut()" class="pointer"
@@ -74,8 +74,27 @@
                 </div>
             </div>
             <div onclick="$(this).fadeOut().prev().fadeOut()" class="dark-bg full" style="display: none;"></div>
+            <div data-w="902" data-h="284" class="fix fixed absolute-full-center" id="call-overlay" style="display: none;">
+                <div data-mt="64" class="fw6 fs32 fix txt-center">Хочете, зателефонуємо Вам?</div>
+                <div class="flex justify-center mb8">
+                    <div data-h="48" data-w="640" id="call-order" data-mt="44" class="fix flex justify-center">
+                        <input data-w="320" class="fix fs18" type="text" id="number-input" name="number" placeholder="Ваш номер телефону ">
+                        <div data-w="320" class="fix flex allign-center justify-center white fs18 fw6 pointer" id="order-call-btn">Зателефонуйте</div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div data-w="640" class="fix">
+                        <div class="fix grey fs15 fw4">Наприклад: 097 000 00 00</div>
+                    </div>
+                </div>
+            </div>
+            <div onclick="$(this).fadeOut().prev().fadeOut()" class="dark-bg full" style="display: none;"></div>
 
             <div id="loader"></div>
+            <div onclick="$('#call-overlay').fadeIn().next().fadeIn()" data-mb="15" data-s="1" class="fix txt-center white fw5 pointer no-select" id="call-btn">
+                <p>Кнопка
+                    зв’язку</p>
+            </div>
         </div>
         <div id="main">
             <nav id="nav-menu" data-h="81" data-w="1365" class="fix container flex allign-center">

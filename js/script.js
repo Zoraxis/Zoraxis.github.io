@@ -46,6 +46,43 @@ $(function () {
     })
     $("#nav-burger").click(navEvent)
     $(".nav-to").click(navEvent)
+    $("#order-call-btn").click(function () {
+        //   $.ajax(
+        //     {
+        //         method: 'POST',
+        //         url: "https://api.mailgun.net/v3/sandboxcfc72f239b864dd9814fc7a469965f80.mailgun.org/messages",
+        //         headers: {
+        //             "Authorization": "Basic YXBpOjdlMWU1ZDQ3NmE2OWRjMmVjMzYyOTNmNDBiMWJiOGFkLWIzNmQyOTY5LWI2OTY1OGYw"
+        //         },
+        //         data: {
+        //             from: 'Mailgun Sandbox <postmaster@sandboxcfc72f239b864dd9814fc7a469965f80.mailgun.org>',
+        //             to: 'Dr Zork <b.v.o0077@gmail.com>',
+        //             subject: 'Hello Dr Zork',
+        //             text: 'Congratulations Dr Zork, you just sent an email with Mailgun!  You are truly awesome!'
+        //         }
+        //     }
+        //   ).done(function (response) {
+        //     console.log(response);
+        //   });
+
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://api.telegram.org/" + '5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI' + "/sendMessage",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json",
+            "cache-control": "no-cache"
+          },
+          "data": JSON.stringify({
+            "chat_id": 835560276,
+            "text": 'hi there'
+          })
+        }
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        }); 
+    })
 })
 function navEvent() { 
     $("#nav-items-collapsed").slideToggle();
