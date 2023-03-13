@@ -60,7 +60,7 @@ $(function () {
         }
 
         const bot = new Bot("5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI", "733336131");
-        bot.sendMessage(val, null, null, false)
+        bot.sendMessage(val, 733336131, null, false);
     });
     $("#number-input").on('input propertychange', function () { 
         $(this).css('border', '1.25px solid #E5E5E5');
