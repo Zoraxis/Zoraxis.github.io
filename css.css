@@ -1,0 +1,25 @@
+:root {
+    --vdark: #61645F;
+    --accent: #ECF4E7;
+    --light: #E5ECE0;
+    --dark: #828680;
+    --medium: #C4CAC0;
+    --border: #A3A8A0;
+}
+
+.grad-lr {
+    background: linear-gradient(to right, var(--light), var(--light), transparent);
+}
+.grad-rl {
+    background: linear-gradient(to left, var(--light), var(--light), transparent);
+}
+.grad-tb {
+    background: linear-gradient(to top, var(--light), var(--light), transparent);
+}
+.grad-bt {
+    background: linear-gradient(to bottom, var(--light), var(--light), transparent);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
