@@ -1,149 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zoraxis</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+      integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
 
-<body class="max-w-[100vw] min-h-[100vh] !w-screen bg-[color:var(--light)] !overflow-hidden">
-    <div class="w-screen h-screen relative flex justify-center items-center" id="overlay">
+  <body
+    class="max-w-[100vw] min-h-[100vh] !w-screen bg-[color:var(--light)] !overflow-hidden"
+  >
+    <div
+      class="w-screen h-screen relative flex justify-center items-center"
+      id="overlay"
+    >
+      <canvas class="absolute"></canvas>
 
-        <canvas class="absolute"></canvas>
-
-        <div class="absolute left-0" style="transform: rotate(55deg);">
-            <div style="transform: translate(-100px, 0px)" class="nick1 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
-            <div style="transform: translate(-900px, -100px)" class="nick2 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
-            <div style="transform: translateY(-200px);" class="nick1 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
-            <div style="transform: translate(-900px, -300px);" class="nick2 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
+      <div class="absolute left-0" style="transform: rotate(55deg)">
+        <div
+          style="transform: translate(-100px, 0px)"
+          class="nick1 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
         </div>
-
-        <div class="absolute left-0" style="transform: rotate(-35deg);">
-            <div class="nick1 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
-            <div style="transform: translate(-500px, -100px)" class="nick2 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
-            <div style="transform: translateY(-200px);" class="nick1 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
-            <div style="transform: translate(-500px, -300px);" class="nick2 absolute bg-[color:var(--medium)] w-max">
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-                <span class="text-[77px] font-semibold tracking-[20px]">@Zoraxis</span>
-            </div>
+        <div
+          style="transform: translate(-900px, -100px)"
+          class="nick2 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
         </div>
-
-        
-        <div class="grad-lr absolute w-[5.5rem] h-screen left-0"></div>
-        <div class="grad-rl absolute w-[5.5rem] h-screen right-0"></div>
-        <div class="grad-tb absolute w-screen h-[5.5rem] bottom-0"></div>
-        <div class="grad-bt absolute w-screen h-[5.5rem] top-0"></div>
-        
-        <div id="border" class="absolute w-[calc(100vw-6rem-4px)] h-[calc(100vh-6rem-4px)] border-[18px] border-dashed border-[color:var(--vdark)]"></div>
-        <svg style="transform: rotate(90deg);" class="piece absolute left-12 top-12 w-24 rotate-90 border-side" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" fill="none">
-            <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
-            <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
-        </svg>
-        <svg style="transform: rotate(180deg);" class="piece absolute right-12 top-12 w-24 rotate-180 border-side" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" fill="none">
-            <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
-            <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
-        </svg>
-        <svg style="transform: rotate(-90deg);" class="piece absolute right-12 bottom-12 w-24 -rotate-90 border-side" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" fill="none">
-            <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
-            <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
-        </svg>
-        <svg style="transform: rotate(0deg);" class="piece absolute left-12 bottom-12 w-24 border-side" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" fill="none">
-            <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
-            <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
-        </svg>
-
-        <div class="flex flex-col gap-[150px] ml-[900px]">
-            <span class="main-text text-[80px] font-thin">Zoraxis</span>
-            <span class="main-text text-[80px] font-thin">DrZork</span>
-            <span class="main-text text-[80px] font-thin">Vasyl Berestov</span>
+        <div
+          style="transform: translateY(-200px)"
+          class="nick1 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
         </div>
+        <div
+          style="transform: translate(-900px, -300px)"
+          class="nick2 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+        </div>
+      </div>
 
+      <div class="absolute left-0" style="transform: rotate(-35deg)">
+        <div class="nick1 absolute bg-[color:var(--medium)] w-max">
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+        </div>
+        <div
+          style="transform: translate(-500px, -100px)"
+          class="nick2 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+        </div>
+        <div
+          style="transform: translateY(-200px)"
+          class="nick1 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+        </div>
+        <div
+          style="transform: translate(-500px, -300px)"
+          class="nick2 absolute bg-[color:var(--medium)] w-max"
+        >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+          <span class="text-[77px] font-semibold tracking-[20px]"
+            >@Zoraxis</span
+          >
+        </div>
+      </div>
+
+      <div class="grad-lr absolute w-[5.5rem] h-screen left-0"></div>
+      <div class="grad-rl absolute w-[5.5rem] h-screen right-0"></div>
+      <div class="grad-tb absolute w-screen h-[5.5rem] bottom-0"></div>
+      <div class="grad-bt absolute w-screen h-[5.5rem] top-0"></div>
+
+      <div
+        id="border"
+        class="absolute w-[calc(100vw-6rem-4px)] h-[calc(100vh-6rem-4px)] border-[18px] border-dashed border-[color:var(--vdark)]"
+      ></div>
+      <svg
+        style="transform: rotate(90deg)"
+        class="piece absolute left-12 top-12 w-24 rotate-90 border-side"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 62 62"
+        fill="none"
+      >
+        <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
+        <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
+      </svg>
+      <svg
+        style="transform: rotate(180deg)"
+        class="piece absolute right-12 top-12 w-24 rotate-180 border-side"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 62 62"
+        fill="none"
+      >
+        <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
+        <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
+      </svg>
+      <svg
+        style="transform: rotate(-90deg)"
+        class="piece absolute right-12 bottom-12 w-24 -rotate-90 border-side"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 62 62"
+        fill="none"
+      >
+        <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
+        <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
+      </svg>
+      <svg
+        style="transform: rotate(0deg)"
+        class="piece absolute left-12 bottom-12 w-24 border-side"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 62 62"
+        fill="none"
+      >
+        <path d="M7 0V55H62" stroke="var(--vdark)" stroke-width="12.5" />
+        <path d="M22 15V40H47" stroke="var(--vdark)" stroke-width="8" />
+      </svg>
+
+      <div class="flex flex-col gap-[150px] ml-[900px]">
+        <span class="main-text text-[80px] font-thin">Zoraxis</span>
+        <span class="main-text text-[80px] font-thin">DrZork</span>
+        <span class="main-text text-[80px] font-thin">Vasyl Berestov</span>
+      </div>
     </div>
 
     <script src="animate.js"></script>
     <script>
-        const canvas = document.querySelector("canvas");
-        const ctx = canvas.getContext("2d");
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
 
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      window.addEventListener("resize", resize);
+      resize();
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (let i = 0; i < 10; i++) {
+          for (let j = 0; j < 10; j++) {
+            const x = i * 100 + ((Date.now() / 10) % 100);
+            const y = j * 100 + ((Date.now() / 10) % 100);
+            ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+            ctx.beginPath();
+            ctx.arc(x, y, 30, 0, Math.PI * 2);
+            ctx.fill();
+          }
         }
-        window.addEventListener("resize", resize);
-        resize();
 
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-
-            for(let i = 0; i < 10; i++) {
-                for(let j = 0; j < 10; j++) {
-                    const x = i * 100 + (Date.now() / 10 % 100);
-                    const y = j * 100 + (Date.now() / 10 % 100);
-                    ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
-                    ctx.beginPath();
-                    ctx.arc(x, y, 30, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-            }
-            
-
-            requestAnimationFrame(animate);
-        }
-        animate();
+        requestAnimationFrame(animate);
+      }
+      animate();
     </script>
-</body>
-
+  </body>
 </html>
