@@ -1,10 +1,10 @@
 :root {
-    --vdark: #61645F;
-    --accent: #ECF4E7;
-    --light: #E5ECE0;
-    --dark: #828680;
-    --medium: #C4CAC0;
-    --border: #A3A8A0;
+    --vdark: hsl(0, 86%, 65%);
+    --accent: #ff0000;
+    --light: #1f1f1f;
+    --dark: #ff5252;
+    --medium: #ce4c4c;
+    --border: #ffb7aa;
 }
 
 .grad-lr {
@@ -22,4 +22,15 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
+    color: var(--light);
+}
+
+.through {
+    pointer-events: none;
+    user-select: none;
+}
+
+.fuzz {
+    /* transition: all 0.15s ease-in-out */
+    transition: all 0.15s cubic-bezier(0.92,-0.68, 0, 1.02);
 }
