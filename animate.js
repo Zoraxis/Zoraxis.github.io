@@ -26,6 +26,13 @@ anime({
   easing: "linear",
   loop: true,
 });
+anime({
+  targets: ".vertical",
+  translateY: "+282.73px",
+  duration: 2000,
+  easing: "linear",
+  loop: true,
+});
 
 anime({
   targets: ".main-text:hover",
@@ -40,13 +47,13 @@ document.querySelectorAll(".main-text").forEach((item) => {
   item.addEventListener("click", (event) => {
     switch (item.innerText) {
       case "Zoraxis":
-        anime({
-          targets: "#main-text-1-bg",
-          opacity: [0, 1],
-          height: ["2.5rem", "120vh"],
-          translateY: ["0rem", "-20vh"],
-          duration: 500,
-        });
+        // anime({
+        //   targets: "#main-text-1-bg",
+        //   opacity: [0, 1],
+        //   height: ["2.5rem", "120vh"],
+        //   translateY: ["0rem", "-20vh"],
+        //   duration: 500,
+        // });
         break;
       case "DrZork":
         window.location.href = "https://drzork.github.io";
